@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HealthHorizon</string>
+    <string name="quot_achieve_your_best_self_with_fittrack_quot">\"Achieve Your Best Self with Us!\"</string>
+    <string name="onboard2">\"Stay on Top of Your Fitness Goals!\"</string>
+    <string name="onboard3">\"Unlock Your Full Potential!\"</string>
+    <string name="stop">STOP</string>
+    <string name="pause">PAUSE</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Color (60%) - Dominant color -->
+    <color name="primaryColor">#FFFF</color>
+
+    <!-- Secondary Color (30%) - Complementary color -->
+    <color name="secondaryColor">#3379AD</color>
+
+    <!-- Accent Color (10%) - Highlight or accent color -->
+    <color name="accentColor">#03346E</color>
+
+    <!-- Neutral Colors -->
+    <color name="black">#FF000000</color>
+
+</resources>

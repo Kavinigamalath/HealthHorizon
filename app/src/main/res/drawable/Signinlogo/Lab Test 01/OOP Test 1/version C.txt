@@ -1,0 +1,69 @@
+
+package com.mycompany.javaproject1;
+
+public class JavaProject1
+{
+        public static void main(String args[]) 
+        {
+                RandNum myRandumObject = new RandNum();
+                myRandumObject.display();
+        }
+
+}
+
+class RandNum
+{
+        int[][] array2D = new int[5][5];
+        
+        public RandNum()
+        {
+                int max = 100, min = 1, range = max - min + 1;
+                
+                for (int i = 0; i < this.array2D.length; i++)
+                {
+                        for (int j = 0; j < this.array2D[0].length; j++) 
+                        {
+                                this.array2D[i][j] = (int)(range * Math.random()) + min;
+                        }     
+                }
+        }
+        
+        public void display()
+        {
+                int minimum = this.array2D[0][0], maximum = this.array2D[0][0], total = 0;
+                double avg;
+                
+                
+                System.out.println("\nArray numbers : ");
+                
+                for (int i = 0; i < this.array2D.length; i++)
+                {
+                        for (int j = 0; j < this.array2D[0].length; j++) 
+                        {
+                                System.out.print( this.array2D[i][j] + "  ");
+
+                                //calculating the minimuum number among all
+                                if (minimum > this.array2D[i][j]) 
+                                {
+                                        minimum = this.array2D[i][j];
+                                }
+                                
+                                //calculating the maximum number among all
+                                if (maximum < this.array2D[i][j])
+                                {
+                                        maximum = this.array2D[i][j];
+                                }
+                                
+                                //calculating the total of all 25 values in the 2d array
+                                total += this.array2D[i][j];
+                        }
+                        
+                        System.out.println("");
+                }
+                
+                avg = (double)total / ( this.array2D.length * this.array2D[0].length );
+                
+                System.out.printf("\n\t Maximum : %d\n\t Minimum : %d\n\t Average : %.2f\n", maximum, minimum, avg);
+                
+        }
+}

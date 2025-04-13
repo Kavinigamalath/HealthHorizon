@@ -1,0 +1,115 @@
+
+package com.mycompany.javaproject1;
+import  java.util.Scanner;
+
+public class JavaProject1
+{
+    public static void main(String args[]) 
+    {
+            Employee manager1 = new Manager("It Department",  4,  6,  2,  "emp-0089",  "Smith weson JR.",  "new candy road malabe");
+            manager1.read();
+        
+
+        
+    }
+
+}
+
+class Employee
+{
+    private String Empid, name, address;
+
+    public Employee(String Empid, String name, String address)
+    {
+        this.Empid = Empid;
+        this.name = name;
+        this.address = address;
+    }
+    
+    public void read()
+    {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("\nEnter the employee ID : ");
+        this.Empid = (String)reader.nextLine();
+
+        System.out.print("\nEnter the employee name : ");
+        this.name= (String)reader.nextLine();
+
+        System.out.print("\nEnter the employee address :  ");
+        this.address = (String)reader.nextLine();
+       
+    }
+    
+    public void print()
+    {
+                System.out.println("\nEmployee{Empid=" + Empid + ", name=" + name + ", address=" + address + "}");
+    }
+}
+
+class Manager extends Employee
+{
+        private String department;
+        private int ProductNo1, ProductNo2, ProductNo3;
+
+        public Manager(String department, int ProductNo1, int ProductNo2, int ProductNo3, String Empid, String name, String address)
+        {
+                super(Empid, name, address);
+                this.department = department;
+                this.ProductNo1 = ProductNo1;
+                this.ProductNo2 = ProductNo2;
+                this.ProductNo3 = ProductNo3;
+        }
+        
+        @Override
+        public void read()
+        {
+                super.read();
+                
+                Scanner reader = new Scanner(System.in);
+
+                System.out.print("\nEnter the Department : ");
+                this.department = (String)reader.nextLine();
+
+                try
+                {
+                        System.out.print("\nEnter the ProductNo1 : ");
+                        this.ProductNo1= (int)reader.nextInt();
+
+                        System.out.print("\nEnter the ProductNo2 : ");
+                        this.ProductNo2= (int)reader.nextInt();
+
+                        System.out.print("\nEnter the ProductNo3 : ");
+                        this.ProductNo3= (int)reader.nextInt();
+                        
+                }
+                catch (Exception e) 
+                {
+                        System.out.println("\n\t * please enter integer values * ");
+                }
+        }
+        
+        @Override
+        public void print()
+        {
+                super.print();
+                System.out.println("Manager{" + "department=" + department + ", ProductNo1=" + ProductNo1 + ", ProductNo2=" + ProductNo2 + ", ProductNo3=" + ProductNo3 + "}");
+        }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+
+package com.mycompany.javaproject1;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class JavaProject1
+{
+        public static void main(String args[]) 
+        {
+                AlarmClock alarm1 = new AlarmClock();
+                AlarmClock alarm2 = new AlarmClock();
+                
+                alarm1.InputAlarm();
+                alarm2.SetAlarm(6, 35, 10);
+                
+                ArrayList<AlarmClock> alarmsList = new ArrayList<>();
+                alarmsList.add(alarm1);
+                alarmsList.add(alarm2);
+
+                for (AlarmClock alarmClock : alarmsList)
+                {
+                        alarmClock.ShowAlarm();
+                }   
+        }
+}
+
+
+class HoursOutOfRange extends Exception
+{
+        public HoursOutOfRange(String msg)
+        {
+                super(msg);
+        }
+}
+
+
+class MinutesOutOfRange extends Exception
+{
+        public MinutesOutOfRange(String msg)
+        {
+                super(msg);
+        }
+}
+
+
+class SecondsOutOfRange extends Exception
+{
+        public SecondsOutOfRange(String msg)
+        {
+                super(msg);
+        }
+}
+
+class AlarmClock
+{
+        private int Hour;
+        private int Minute;
+        private int Second;
+
+        public AlarmClock()
+        {
+                this.Hour = 12;
+                this.Minute = 0;
+                this.Second = 0;
+        }
+        
+        public void InputAlarm()
+        {
+                Scanner reader = new Scanner(System.in);
+                
+                try 
+                {
+                        System.out.print("Hours  : ");
+                        this.Hour = reader.nextInt();
+                        
+                         if(!(this.Hour <= 12 && this.Hour >= 0))
+                                throw new HoursOutOfRange("\n\t * Hours should be in range to 0 to 12 *\n");
+                        
+                        System.out.print("Minute : ");
+                        this.Minute = reader.nextInt();
+                        
+                        if(!(this.Minute < 60 && this.Minute >= 0))
+                                throw new MinutesOutOfRange("\n\t * Minutes should be in range to 0 to 60 *\n");
+                        
+                        System.out.print("Second : ");
+                        this.Second = reader.nextInt();
+                                                
+                        if(!(this.Second < 60 && this.Second >= 0))
+                                throw new SecondsOutOfRange("\n\t * Seconds should be in range to 0 to 60 *\n");
+                }
+                catch (NumberFormatException e)
+                {
+                        System.out.println("\n\t ! You entered a non numeric value ! \n");
+                }
+                catch(HoursOutOfRange e)
+                {
+                        System.out.println(e.getMessage());
+                        this.Hour = 12;
+                }
+                catch(MinutesOutOfRange e)
+                {
+                        System.out.println(e.getMessage());
+                        this.Minute = 0;
+                }
+                catch(SecondsOutOfRange e)
+                {
+                        System.out.println(e.getMessage());
+                        this.Second = 0;
+                }
+                
+        }
+
+        public void ShowAlarm() 
+        {
+                System.out.println("\nAlarmClock{ Hour=" + Hour + ", Minute=" + Minute + ", Second=" + Second + "}");
+        }
+        
+        public void SetAlarm(int Hours, int Minutes, int seconds)
+        {
+                if(Hours <= 12 && Hours >= 0)
+                        this.Hour = Hours;
+                else
+                        this.Hour = 0;
+                
+                if(Minutes < 60 && Minutes >= 0)
+                        this.Minute = Minutes;
+                else
+                        this.Hour = 0;
+                
+                if(seconds < 60 && seconds >= 0 )
+                        this.Second = seconds;
+                else
+                        this.Second = 0;
+        }
+        
+              
+}
