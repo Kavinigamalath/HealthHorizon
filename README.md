@@ -8,11 +8,7 @@ Welcome to the **HealthHorizon** repository! This project showcases the **UI des
 
 - [About the App](#about-the-app)
 - [Features](#features)
-- [UI/UX Design](#uix-design)
 - [Installation Instructions](#installation-instructions)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 - [Screenshots](#screenshots)
 
 ## About the App
@@ -71,4 +67,90 @@ HealthHorizon makes it easier for individuals to track and visualize their fitne
 1. Clone the repository:
    ```bash
    git clone https://github.com/Kavinigamalath/HealthHorizon.git
+## Screenshots
+
+### 1. **Logo/Opening Page**
+![Logo/Opening Page](./screenshots/image1.png)
+
+*This is the initial logo and opening screen of the app.*
+
+---
+
+### 2. **Onboarding Screens**
+#### Onboarding Screen 1
+![Onboarding Screen 1](./screenshots/image2.png)
+
+*First screen in the onboarding process that introduces the app.*
+
+#### Onboarding Screen 2
+![Onboarding Screen 2](./screenshots/image3.png)
+
+*Second onboarding screen providing more information.*
+
+#### Onboarding Screen 3
+![Onboarding Screen 3](./screenshots/image4.png)
+
+*Final onboarding screen highlighting key app features.*
+
+---
+
+### 3. **Authentication Pages**
+#### Sign-In Page
+![Sign-In Page](./screenshots/image5.png)
+
+*Page where users can log in with their credentials.*
+
+#### Sign-Up Page
+![Sign-Up Page](./screenshots/image6.png)
+
+*Page for new users to create an account.*
+
+---
+
+### 4. **Home Page**
+![Home Page](./screenshots/image7.png)
+
+*The central hub of the app, displaying daily fitness metrics like steps, calories burned, and water intake.*
+
+---
+
+### 5. **Workout Page**
+![Workout Page](./screenshots/image8.png)
+
+*Page where users can select different workout types such as jogging, cycling, and yoga.*
+
+---
+
+### 6. **Jogging Pages**
+#### Jogging Start Page
+![Jogging Start Page](./screenshots/image9.png)
+
+*Page for users to start a jogging session, tracking metrics like calories and pace.*
+
+#### Jogging Stop Page
+![Jogging Stop Page](./screenshots/image10.png)
+
+*Page that appears when the jogging session is stopped, displaying a pause screen.*
+
+#### Jogging Summary Page
+![Jogging Summary Page](./screenshots/image11.png)
+
+*Page showing a detailed summary of the jogging session, including calories burned and distance.*
+
+---
+
+### **Other Pages**
+
+### 7. **Profile Page**
+![Profile Page](./screenshots/image12.png)
+
+*Page where users can edit their profile, log out, or delete their account.*
+
+---
+
+### 8. **Workout History Page**
+![Workout History Page](./screenshots/image13.png)
+
+*Page showing a history of all the user’s previous workouts and their details.*
+
 
